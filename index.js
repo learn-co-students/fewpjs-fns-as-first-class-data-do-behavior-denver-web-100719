@@ -10,14 +10,14 @@ function handleClick(e) {
 /* Write your implementation of greet() */
 function greet(time){
   const timeSplit = time.split(':')
-  timeSplit[0] = parseInt(timeSplit[0])
-  if(timeSplit[0] < 12){
+  const timeHourMin = parseInt(timeSplit[0] + timeSplit[1])
+  if (timeHourMin < 1200) {
     return "Good Morning"
-  } else if (timeSplit[0] >= 12 && timeSplit[0] <= 17){
+  } else if (timeHourMin >= 1200 && timeHourMin <= 1700) {
     return "Good Afternoon"
   } else {
     return "Good Evening"
-  }
+  } 
 }
 
 /* Write your implementation of displayMessage() */
